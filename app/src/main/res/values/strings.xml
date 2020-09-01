@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Tp2Grupo7</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="formulario_de_contacto">FORMULARIO DE CONTACTO</string>
+    <string name="descripcion_formulario">Este es un formulario destinado al registro de personas, sus datos personales e intereses.</string>
+    <string name="nombre_form">NOMBRE</string>
+    <string name="nombre_ed">Nombre</string>
+    <string name="apellido_form">APELLIDO</string>
+    <string name="apellido_ed">Apellido</string>
+    <string name="telefono_form">TELÉFONO</string>
+    <string name="telefono_ed">Teléfono</string>
+    <string name="email_form">EMAIL</string>
+    <string name="email_ed">Email</string>
+    <string name="direccion_form">DIRECCIÓN</string>
+    <string name="direccion_ed">Dirección</string>
+    <string name="fechnac_form">FECHA DE NACIMIENTO</string>
+    <string name="fecha_nacimiento">Fecha nacimiento</string>
+    <string name="Descrip_mas_datos">A continuación, por favor se pide completar más datos personales</string>
+    <string name="otros">Otros</string>
+    <string name="secundario_completo">Secundario completo</string>
+    <string name="secundario_incompleto">Secundario incompleto</string>
+    <string name="primario_completo">Primario completo</string>
+    <string name="primario_incompleto">Primario incompleto</string>
+    <string name="nivel_de_estudios_alcanzados">NIVEL DE ESTUDIOS ALCANZADOS</string>
+    <string name="intereses">INTERESES</string>
+    <string name="deporte">Deporte</string>
+    <string name="musica">Música</string>
+    <string name="arte">Arte</string>
+    <string name="tecnologia">Tecnología</string>
+    <string name="guardar">Guardar</string>
+    <string name="si">Si </string>
+    <string name="desea_recibir_informacion">DESEA RECIBIR INFORMACIÓN?</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/AddContact">
+
+    <fragment
+        android:id="@+id/AddContact"
+        android:name="utn.frgp.tusi.tp2_grupo_7.AddContact"
+        android:label="Añadir contactos">
+
+        <action
+            android:id="@+id/action_to_more_info"
+            app:destination="@id/AddContactMore" />
+    </fragment>
+    <fragment
+        android:id="@+id/ListContacts"
+        android:name="utn.frgp.tusi.tp2_grupo_7.ListContacts"
+        android:label="Listar contactos"
+        tools:layout="@layout/list_contacts">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/AddContact" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddContactMore"
+        android:name="utn.frgp.tusi.tp2_grupo_7.AddContactMore"
+        android:label="Listar contactos"
+        tools:layout="@layout/add_contact_more">
+    </fragment>
+</navigation>
