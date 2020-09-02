@@ -1,38 +1,30 @@
 package utn.frgp.tusi.tp2_grupo_7;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
+import android.widget.CheckBox;
+import android.widget.RadioButton;
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
+public class AddContactMore extends OptionMenu {
 
-public class AddContactMore extends Fragment {
+    private RadioButton primarioInc, primarioCom, secundarioInc, secundarioCom, otroEstudio;
+    private CheckBox deporte, arte, musica, tecnologia;
+
 
     @Override
-    public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
-    ) {
-        View v = inflater.inflate(R.layout.add_contact_more, container, false);
-        // Inflate the layout for this fragment
-        return v;
-    }
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.add_contact_more);
 
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        Bundle dataFromFragment = getArguments();
-        if(dataFromFragment != null){
-            Log.i("test", dataFromFragment.getString("nombre"));
-            Log.i("emailType", dataFromFragment.getString("tipo_email"));
-        }else{
-            Log.e("error", "no hay datos");
-        }
+        primarioInc = (RadioButton) findViewById(R.id.rbt_primario_inc);
+        primarioCom = (RadioButton) findViewById(R.id.rbt_primario_com);
+        secundarioInc = (RadioButton) findViewById(R.id.rbt_secundario_inc);
+        secundarioCom = (RadioButton) findViewById(R.id.rbt_secundario_com);
+        otroEstudio = (RadioButton) findViewById(R.id.rbt_otro);
+
+        deporte = (CheckBox) findViewById(R.id.chk_deporte);
+        arte = (CheckBox) findViewById(R.id.chk_arte);
+        musica = (CheckBox) findViewById(R.id.chk_musica);
+        tecnologia = (CheckBox) findViewById(R.id.chk_tecnologia);
     }
 
 }

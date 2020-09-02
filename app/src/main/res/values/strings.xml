@@ -36,4 +36,6 @@
     <string name="guardar">Guardar</string>
     <string name="si">Si </string>
     <string name="desea_recibir_informacion">DESEA RECIBIR INFORMACIÓN?</string>
+    <string name="agregar_contactos">Agregar contactos</string>
+    <string name="listado_de_contactos">Listado de contactos</string>
 </resources>
