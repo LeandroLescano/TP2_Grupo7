@@ -3,17 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="409dp"
-    android:layout_height="702dp"
-    android:paddingTop="15dp"
-    android:paddingLeft="30dp"
-    android:paddingRight="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="28dp">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -21,7 +18,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
 
             <TextView
                 android:id="@+id/txt_add_contact_title"
@@ -137,22 +137,24 @@
 
                 <TextView
                     android:id="@+id/editTextTextPersonName"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".80"
                     android:text="@string/desea_recibir_informacion" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/switch_get_info"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="20dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".20"
                     android:text="@string/si" />
             </LinearLayout>
             <Button
                 android:id="@+id/btn_guardar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="right"
                 android:text="@string/guardar" />
 
         </LinearLayout>

@@ -3,25 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="409dp"
-    android:layout_height="702dp"
-    android:paddingTop="15dp"
-    android:paddingLeft="30dp"
-    android:paddingRight="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="28dp">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
 
             <TextView
                 android:id="@+id/txt_add_contact_title"
@@ -81,16 +81,16 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/et_email"
+                    android:id="@+id/et_telefono"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".60"
-                    android:hint="@string/email_ed"
-                    android:inputType="textEmailAddress"
+                    android:hint="@string/telefono_ed"
+                    android:inputType="phone"
                     android:textSize="15sp" />
 
                 <Spinner
-                    android:id="@+id/sp_email"
+                    android:id="@+id/sp_telefono"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".40" />
@@ -109,16 +109,16 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/et_telefono"
+                    android:id="@+id/et_email"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".60"
-                    android:hint="@string/telefono_ed"
-                    android:inputType="phone"
+                    android:hint="@string/email_ed"
+                    android:inputType="textEmailAddress"
                     android:textSize="15sp" />
 
                 <Spinner
-                    android:id="@+id/sp_telefono"
+                    android:id="@+id/sp_email"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".40" />

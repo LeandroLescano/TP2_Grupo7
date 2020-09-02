@@ -1,6 +1,7 @@
 package utn.frgp.tusi.tp2_grupo_7;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,13 @@ public class AddContactMore extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        Bundle dataFromFragment = getArguments();
+        if(dataFromFragment != null){
+            Log.i("test", dataFromFragment.getString("nombre"));
+            Log.i("emailType", dataFromFragment.getString("tipo_email"));
+        }else{
+            Log.e("error", "no hay datos");
+        }
     }
+
 }
