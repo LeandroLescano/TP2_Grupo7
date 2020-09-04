@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -53,16 +54,60 @@ public class AddContact extends OptionMenu {
     }
 
     public void sendData(View view){
-        Intent i = new Intent(this, AddContactMore.class);
-        i.putExtra("nombre", name.getText().toString());
-        i.putExtra("apellido", surname.getText().toString());
-        i.putExtra("telefono", phone.getText().toString());
-        i.putExtra("tipo_telefono", phoneType.getSelectedItem().toString());
-        i.putExtra("email", email.getText().toString());
-        i.putExtra("tipo_email", emailType.getSelectedItem().toString());
-        i.putExtra("direccion", direction.getText().toString());
-        i.putExtra("fechnac", fechNac.getText().toString());
-        startActivity(i);
+        if(validarCampos()==true) {
+            Intent i = new Intent(this, AddContactMore.class);
+            i.putExtra("nombre", name.getText().toString());
+            i.putExtra("apellido", surname.getText().toString());
+            i.putExtra("telefono", phone.getText().toString());
+            i.putExtra("tipo_telefono", phoneType.getSelectedItem().toString());
+            i.putExtra("email", email.getText().toString());
+            i.putExtra("tipo_email", emailType.getSelectedItem().toString());
+            i.putExtra("direccion", direction.getText().toString());
+            i.putExtra("fechnac", fechNac.getText().toString());
+            startActivity(i);
+        }
     }
+
+    public boolean validarCampos(){
+        if(name.getText().toString().trim().isEmpty()){
+            Toast.makeText(getApplicationContext(),"El Nombre no puede estar vacio",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if(surname.getText().toString().trim().isEmpty()){
+            Toast.makeText(getApplicationContext(),"El Apellido no puede estar vacio",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if(phone.getText().toString().trim().isEmpty()){
+            Toast.makeText(getApplicationContext(),"El Teléfono no puede estar vacio",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if(email.getText().toString().trim().isEmpty()){
+            Toast.makeText(getApplicationContext(),"El Email no puede estar vacio",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if(direction.getText().toString().trim().isEmpty()){
+            Toast.makeText(getApplicationContext(),"El Dirección no puede estar vacio",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if(fechNac.getText().toString().trim().isEmpty()){
+            Toast.makeText(getApplicationContext(),"El Fecha de Nacimiento no puede estar vacio",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        try {
+            int num = Integer.parseInt(name.getText().toString());
+            Toast.makeText(getApplicationContext(),"Error el Nombre posee numeros",Toast.LENGTH_LONG).show();
+            return false;
+
+        } catch (NumberFormatException e) {
+        }
+
+        try {
+            int num = Integer.parseInt(surname.getText().toString());
+            Toast.makeText(getApplicationContext(),"Error el Apellido posee numeros",Toast.LENGTH_LONG).show();
+            return false;
+        } catch (NumberFormatException e) {
+        }
+        return true;
+}
 
 }
